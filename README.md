@@ -1,17 +1,32 @@
-Key Features & Analysis
-Data Exploration: The project analyzes student data (e.g., age, parental education, failures, and social activities) to understand their distribution and impact on final grades.
+Gemini said
+Factors Affecting School Grade: Feature Analysis & Prediction
+This study explores predicting the final mathematics grades (G3) of secondary school students using machine learning. The project evaluates how different sets of academic and social indicators—ranging from parental education to lifestyle choices—impact the accuracy of grade predictions.
 
-Visualization: Includes detailed correlation matrices and histograms to visualize the relationship between categorical features and academic performance.
+Project Overview
+The analysis utilizes a student performance dataset to identify the key drivers of academic success. The study focuses on simplifying predictive models by comparing a broad data-driven feature set against a targeted set derived from academic literature. The workflow involves data preprocessing, categorical encoding, and comparative performance evaluation using regression metrics.
 
-Feature Engineering: Uses LabelEncoder to process categorical variables for machine learning compatibility.
+Key Findings
+Model Comparison: A Literature-Based approach (4 features) outperformed a broader Data-Driven approach (6 features).
 
-Model Comparison: Evaluates different feature sets to optimize prediction accuracy (R2 Score) and minimize error (Mean Absolute Error).
+Predictive Accuracy: The refined model achieved a better R2 Score (0.0554) and a lower Mean Absolute Error (3.6259).
 
-Core Findings
-The analysis compared two different approaches to feature selection:
+Significant Indicators: Prior class failures, mother’s education (Medu), age, and the desire for higher education were identified as the most potent predictors.
 
-Data-Driven Approach (6 Features): Included failures, Medu (mother's education), age, Fedu (father's education), higher (desire for higher education), and goout (frequency of going out).
+Complexity vs. Performance: Reducing model noise by removing less impactful variables like "going out frequency" improved overall predictive stability.
 
-Literature-Based Approach (4 Features): Focused on failures, Medu, age, and higher.
+Technical Summary
+The analysis was performed using Python in Jupyter Notebooks with the following libraries:
 
-Results indicated that focusing on a smaller set of high-impact variables (the Literature-Based approach) yielded a better R2 Score (0.0554) and lower MAE (3.6259) compared to the broader data-driven set, suggesting that specific personal and academic background markers are the strongest predictors in this dataset.
+Pandas & Numpy: For data manipulation and numerical analysis.
+
+Scikit-Learn: For implementing LabelEncoder and regression models.
+
+Matplotlib & Seaborn: For generating correlation matrices and distribution histograms.
+
+Repository Contents
+FactorAffectingGrades.ipynb: The main Jupyter Notebook containing data exploration, visualization, and model training.
+
+README.md: Documentation of the project's methodology and findings.
+
+Dataset
+The Student Performance Dataset used in this study includes various attributes such as student grades, demographic, social, and school-related features.
